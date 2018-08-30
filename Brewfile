@@ -15,7 +15,6 @@ brew "bat"
 brew "blackbox"
 brew "calc"
 brew "cask"
-brew "ceylon"
 brew "colordiff"
 brew "cowsay"
 brew "curl", args: ["with-nghttp2"], link: true
