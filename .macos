@@ -169,6 +169,8 @@ defaults write com.apple.terminal StringEncodings -array 4
 # See: https://security.stackexchange.com/a/47786/8918
 defaults write com.apple.terminal SecureKeyboardEntry -bool true
 
+defaults write com.apple.terminal "Startup Window Settings" -string "Homebrew"
+
 ###############################################################################
 # Time Machine                                                                #
 ###############################################################################
