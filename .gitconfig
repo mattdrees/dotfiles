@@ -1,0 +1,46 @@
+[user]
+	name = Matt Drees
+	email = matt.drees@cru.org
+[core]
+	excludesfile = /Users/mattdrees/.gitignore_global
+	autocrlf = input
+	whitespace = tab-in-indent
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[credential]
+	helper = osxkeychain
+[color]
+	ui = true
+[push]
+	default = upstream
+[branch]
+	autosetuprebase = always
+[branch "*branch-name*"]
+	rebase = true
+[diff]
+	submodule = log
+[commit]
+	template = /Users/mattdrees/.stCommitMsg
+[alias]
+	st = status --branch --short
+	wat = log --graph --decorate --oneline -15
+	cd = checkout
+	patch = add --patch
+	unstage = reset HEAD --
+	unstage-patch = reset HEAD --patch
+	com = commit -m
+	f = commit --amend --no-edit
+	follow = log --follow -p
+	pf = push --force-with-lease
+	pushf = push --force-with-lease
+	cleanup-dry-run = "!git branch --merged master | grep  -v '\\*\\|master\\|develop'"
+	cleanup = "!git branch --merged master | grep  -v '\\*\\|master\\|develop\\|staging' | xargs -n 1 git branch -d"
+	r = commit --amend
+[diff "blackbox"]
+	textconv = gpg --use-agent -q --batch --decrypt
+[rebase]
+	autoSquash = true
