@@ -1,0 +1,38 @@
+alias mtree='mvn dependency:tree | less -R'
+alias mvnt='mvn --threads 1C -DskipAllTests --offline'
+JDWP_DEBUG="-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005"
+#JREBEL="-javaagent:/Users/mattdrees/.jrebel/jrebel.jar"
+#JREBEL="-javaagent:/Users/mattdrees/Scratch/jrebel-nightly/jrebel/jrebel.jar"
+#JREBEL="-agentpath:/Users/mattdrees/Scratch/jrebel-nightly/jrebel/lib/libjrebel64.dylib"
+#JREBEL="-agentpath:/Users/mattdrees/Library/Application Support/IdeaIC2016.2/jr-ide-idea/lib/jrebel6/lib/libjrebel64.dylib"
+JREBEL="-agentpath:/Users/mattdrees/.jrebel/lib/libjrebel64.dylib"
+
+alias mvnd='MAVEN_OPTS="$MAVEN_OPTS '"$JDWP_DEBUG"'" mvn'
+alias mvnj='MAVEN_OPTS="$MAVEN_OPTS '"$JREBEL"'" mvn'
+alias mvndj='MAVEN_OPTS="$MAVEN_OPTS  '"$JREBEL $JDWP_DEBUG"'" mvn'
+
+alias killkav='sudo pkill -1 -U root kav'
+
+alias cdpwd='cd $PWD'
+
+alias jqp="jq '.'"
+alias xmlp=" xmllint --format  -"
+
+alias cdf='eval `osascript /Applications/Utilities/OpenTerminal.app/Contents/Resources/Scripts/OpenTerminal.scpt `'
+alias la='ls -laO'
+
+alias gs='git status'
+alias gds='git diff --staged'
+alias gd='git diff'
+
+alias cdgr='cd ./`git rev-parse --show-prefix`'
+
+alias copyLastCmd="fc -ln -1 | awk '{\$1=\$1}1' | pbcopy"
+
+alias copybranch="git rev-parse --abbrev-ref HEAD | pbcopy"
+
+alias pbc='pbpaste | wc'
+
+alias bp='code ~/.bash_profile'
+alias editaliases='code ~/.aliases'
+alias reload='source ~/.bash_profile'
