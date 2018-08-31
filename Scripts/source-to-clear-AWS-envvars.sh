@@ -1,0 +1,1 @@
+/Users/mattdrees/Projects/aws_scripts/awscli-mfa/source-to-clear-AWS-envvars.sh

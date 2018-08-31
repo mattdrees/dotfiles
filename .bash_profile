@@ -1,5 +1,7 @@
 source ~/.profile
 
+[[ -s "$HOME/.unpublished_env" ]] && source "$HOME/.unpublished_env"
+
 export PATH=~/Scripts:$PATH
 export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/sbin:$PATH
