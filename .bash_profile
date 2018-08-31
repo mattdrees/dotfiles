@@ -124,8 +124,6 @@ export HISTSIZE=
 export HISTFILESIZE=1000000
 
 
-export PATH="/usr/local/opt/curl/bin:$PATH"
-
 
 # recommended by https://gist.github.com/korya/bd0de47f36dbb5c29a90
 # and in particular, this gets git prompt working for a new Terminal tab
