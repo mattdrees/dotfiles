@@ -101,27 +101,27 @@ export ANSIBLE_COW_SELECTION=random
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
 
-shopt -s histappend
+#shopt -s histappend
 
-export HISTCONTROL=ignoreboth:erasedups
+#export HISTCONTROL=ignoreboth:erasedups
 
 
 # Avoid duplicates
-export HISTCONTROL=ignoredups:erasedups  
+#export HISTCONTROL=ignoredups:erasedups  
 # Timestamps in history file
-export HISTTIMEFORMAT='%F %T '
+#export HISTTIMEFORMAT='%F %T '
 
 # When the shell exits, append to the history file instead of overwriting it
-shopt -s histappend
+#shopt -s histappend
 
 # After each command, append to the history file
-export PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a;"
+#export PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a;"
 # (But don't clear and reread it)
 # see http://unix.stackexchange.com/questions/1288/preserve-bash-history-in-multiple-terminal-windows
 
 
-export HISTSIZE=
-export HISTFILESIZE=1000000
+#export HISTSIZE=
+#export HISTFILESIZE=1000000
 
 
 
