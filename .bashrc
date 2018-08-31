@@ -12,7 +12,7 @@
 
 source ~/.aliases
 
-source ~/git-completion.bash
+#source ~/git-completion.bash
 
 complete -C '/usr/local/bin/aws_completer' aws
 
