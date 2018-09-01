@@ -16,8 +16,8 @@ source ~/.aliases
 
 complete -C '/usr/local/bin/aws_completer' aws
 
-if [ -f $(brew --prefix)/etc/bash_completion ]; then
-  . $(brew --prefix)/etc/bash_completion
+if [ -f /usr/local/share/bash-completion/bash_completion ]; then
+  . /usr/local/share/bash-completion/bash_completion
 fi
 
 # from http://djromero.wuonm.com/git-branch-bash-prompt/
