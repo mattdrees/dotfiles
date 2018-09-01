@@ -1,7 +1,0 @@
-#!/usr/bin/env bash
-
-BASH4_LOCATION='/usr/local/bin/bash'
-SHELLS_FILE='/etc/shells'
-grep -q "$BASH4_LOCATION" "$SHELLS_FILE" || echo "$BASH4_LOCATION" | sudo tee -a "$SHELLS_FILE"
-
-chsh -s "$BASH4_LOCATION"
