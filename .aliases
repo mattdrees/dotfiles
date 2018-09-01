@@ -25,6 +25,11 @@ alias gs='git status'
 alias gds='git diff --staged'
 alias gd='git diff'
 
+alias ys='yadm status'
+alias yds='yadm diff --staged'
+alias yd='yadm diff'
+
+
 alias cdgr='cd ./`git rev-parse --show-prefix`'
 
 alias copyLastCmd="fc -ln -1 | awk '{\$1=\$1}1' | pbcopy"
