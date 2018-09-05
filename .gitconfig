@@ -33,6 +33,7 @@
 	unstage = reset HEAD --
 	unstage-patch = reset HEAD --patch
 	com = commit -m
+	comm = commit
 	f = commit --amend --no-edit
 	follow = log --follow -p
 	pf = push --force-with-lease
