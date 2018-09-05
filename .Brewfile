@@ -38,6 +38,7 @@ brew "lesspipe"
 brew "markdown"
 brew "mas"
 brew "maven"
+brew "maven-completion"
 brew "md5sha1sum"
 brew "nginx"
 brew "nmap"
@@ -86,6 +87,7 @@ mas "Evernote", id: 406056744
 mas "GarageBand", id: 682658836
 mas "iMovie", id: 408981434
 mas "Keynote", id: 409183694
+mas "Microsoft Remote Desktop", id: 1295203466
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "Speedtest", id: 1153157709
