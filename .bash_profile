@@ -66,8 +66,7 @@ export PATH=~/.jenv-override-shims:$PATH
 [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
 
 
-LESSOPEN="|/usr/local/bin/lesspipe.sh %s"
-export LESSOPEN
+source ~/.less_config
 
 binless() {
   hexdump -C $1 | less

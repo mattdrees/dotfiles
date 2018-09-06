@@ -34,7 +34,7 @@ brew "jq"
 brew "kubernetes-cli"
 brew "kubernetes-helm"
 brew "lastpass-cli", args: ["with-pinentry"]
-brew "lesspipe"
+brew "lesspipe", args: ["with-syntax-highlighting"]
 brew "markdown"
 brew "mas"
 brew "maven"
