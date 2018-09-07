@@ -36,7 +36,7 @@ alias copyLastCmd="fc -ln -1 | awk '{\$1=\$1}1' | pbcopy"
 
 alias copybranch="git rev-parse --abbrev-ref HEAD | pbcopy"
 
-alias pbc='pbpaste | wc'
+alias pbwc='pbpaste | wc'
 
 alias bp='code ~/.bash_profile'
 alias editaliases='code ~/.aliases'
