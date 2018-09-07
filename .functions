@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+the_key_gr_prod_access_token() {
+  lpass show --notes  "the key global registry prod access token"
+}
