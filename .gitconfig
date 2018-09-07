@@ -41,6 +41,7 @@
 	cleanup-dry-run = "!git branch --merged master | grep  -v '\\*\\|master\\|develop'"
 	cleanup = "!git branch --merged master | grep  -v '\\*\\|master\\|develop\\|staging' | xargs -n 1 git branch -d"
 	r = commit --amend
+	alias = config --get-regexp ^alias\\.
 [diff "blackbox"]
 	textconv = gpg --use-agent -q --batch --decrypt
 [rebase]
