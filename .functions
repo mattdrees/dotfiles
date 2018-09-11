@@ -5,5 +5,5 @@ the_key_gr_prod_access_token() {
 }
 
 jsonless() {
-  jqp -C | less -R
+  jq '.' --color-output | less --RAW-CONTROL-CHARS
 }
