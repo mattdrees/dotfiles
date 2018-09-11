@@ -29,6 +29,7 @@ brew "graphviz"
 brew "groovy"
 brew "hfsutils"
 brew "httpie"
+brew "hub"
 brew "jenv"
 brew "jq"
 brew "kubernetes-cli"
@@ -70,6 +71,7 @@ brew "watch"
 brew "watchman"
 brew "wget"
 brew "yadm"
+cask "apache-directory-studio"
 cask "daisydisk"
 cask "docker"
 cask "firefox"
@@ -81,13 +83,16 @@ cask "intellij-idea"
 cask "java8"
 cask "minikube"
 cask "minishift"
+cask "rescuetime"
 cask "spectacle"
 cask "synergy"
+cask "tunnelblick"
 cask "visual-studio-code"
 mas "Evernote", id: 406056744
 mas "GarageBand", id: 682658836
 mas "iMovie", id: 408981434
 mas "Keynote", id: 409183694
+mas "LastPass", id: 926036361
 mas "Microsoft Remote Desktop", id: 1295203466
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
