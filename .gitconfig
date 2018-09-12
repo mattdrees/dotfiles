@@ -23,6 +23,8 @@
 	rebase = true
 [diff]
 	submodule = log
+	colorMoved = true
+	colorMovedWS = allow-indentation-change
 [commit]
 	template = /Users/mattdrees/.stCommitMsg
 [alias]
