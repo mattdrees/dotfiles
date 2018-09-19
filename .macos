@@ -110,9 +110,6 @@ defaults write com.apple.finder FXInfoPanesExpanded -dict \
 # Dock, Dashboard, and hot corners                                            #
 ###############################################################################
 
-# Show only open applications in the Dock
-defaults write com.apple.dock static-only -bool true
-
 # Make Dock icons of hidden applications translucent
 defaults write com.apple.dock showhidden -bool true
 
