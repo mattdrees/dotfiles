@@ -4,6 +4,10 @@ the_key_gr_prod_access_token() {
   lpass show --notes  "the key global registry prod access token"
 }
 
+my_root_prod_access_token() {
+  lpass show --notes  "matt_root prod gr access key"
+}
+
 jsonless() {
   jq '.' --color-output | less --RAW-CONTROL-CHARS
 }
