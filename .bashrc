@@ -35,11 +35,19 @@ rename_tab_to_dir() {
     rename_tab $(get_dir)
 }
 
+git_prompt_command() {
+    local me_or_username="\u"
+    if [ "$USER" == "mattdrees" ]; then
+        me_or_username="me"
+    fi
+    __git_ps1 "$me_or_username@\h:\W" "\\$ "
+}
+
 #GIT_PS1_SHOWUPSTREAM="auto"
 GIT_PS1_SHOWDIRTYSTATE=true
 GIT_PS1_SHOWCOLORHINTS=true
 GIT_PS1_UNTRACKEDFILES=true
-PROMPT_COMMAND='__git_ps1 "\u@\h:\W" "\\$ ";rename_tab_to_dir;'
+PROMPT_COMMAND='git_prompt_command;rename_tab_to_dir;'
 
 # tabtab source for serverless package
 # uninstall by removing these lines or running `tabtab uninstall serverless`
