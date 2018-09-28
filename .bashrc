@@ -40,7 +40,7 @@ git_prompt_command() {
     if [ "$USER" == "mattdrees" ]; then
         me_or_username="me"
     fi
-    __git_ps1 "$me_or_username@\h:\W" "\\$ "
+    __git_ps1 "\n$me_or_username@\h:\W" "\n\\$ "
 }
 
 #GIT_PS1_SHOWUPSTREAM="auto"
