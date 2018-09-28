@@ -41,3 +41,5 @@ alias pbwc='pbpaste | wc'
 alias bp='code ~/.bash_profile'
 alias editaliases='code ~/.aliases'
 alias reload='source ~/.bash_profile'
+
+alias copyfixup="git fixup | cut -f1 -d' ' | tr -d '\n' | pbcopy"
