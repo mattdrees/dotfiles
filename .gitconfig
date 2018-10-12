@@ -36,6 +36,7 @@
 	comm = commit
 	f = commit --amend --no-edit
 	follow = log --follow -p
+	logbranch = "!git log --graph --oneline -$(git rev-list master..HEAD --count)"
 	patch = add --patch
 	pf = push --force-with-lease
 	pushf = push --force-with-lease
