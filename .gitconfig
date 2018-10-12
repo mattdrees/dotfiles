@@ -28,22 +28,22 @@
 [commit]
 	template = /Users/mattdrees/.stCommitMsg
 [alias]
-	st = status --branch --short
-	wat = log --graph --decorate --oneline -15
+	alias = config --get-regexp ^alias\\.
 	cd = checkout
-	patch = add --patch
-	unstage = reset HEAD --
-	unstage-patch = reset HEAD --patch
+	cleanup = "!git branch --merged master | grep  -v '\\*\\|master\\|develop\\|staging' | xargs -n 1 git branch -d"
+	cleanup-dry-run = "!git branch --merged master | grep  -v '\\*\\|master\\|develop'"
 	com = commit -m
 	comm = commit
 	f = commit --amend --no-edit
 	follow = log --follow -p
+	patch = add --patch
 	pf = push --force-with-lease
 	pushf = push --force-with-lease
-	cleanup-dry-run = "!git branch --merged master | grep  -v '\\*\\|master\\|develop'"
-	cleanup = "!git branch --merged master | grep  -v '\\*\\|master\\|develop\\|staging' | xargs -n 1 git branch -d"
 	r = commit --amend
-	alias = config --get-regexp ^alias\\.
+	st = status --branch --short
+	unstage = reset HEAD --
+	unstage-patch = reset HEAD --patch
+	wat = log --graph --decorate --oneline -15
 [diff "blackbox"]
 	textconv = gpg --use-agent -q --batch --decrypt
 [rebase]
