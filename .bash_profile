@@ -21,7 +21,7 @@ export PATH=$ORACLE_HOME:$PATH
 
 alias setjh="source ~/Scripts/setjavahome.sh"
 
-export MAVEN_OPTS='-Xmx2024m -XX:MaxPermSize=512m -Djava.awt.headless=true -Dhttps.protocols=TLSv1.2'
+export MAVEN_OPTS='-Xmx2024m -Djava.awt.headless=true -Dhttps.protocols=TLSv1.2'
 
 
 # blackbox_edit calls "$EDITOR" instead of $EDITOR,
