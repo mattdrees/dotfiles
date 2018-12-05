@@ -8,6 +8,10 @@ my_root_prod_access_token() {
   lpass show --notes  "matt_root prod gr access key"
 }
 
+my_root_stage_access_token() {
+  lpass show --notes  "matt_root stage gr access key"
+}
+
 jsonless() {
   jq '.' --color-output | less --RAW-CONTROL-CHARS
 }
