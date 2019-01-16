@@ -121,8 +121,8 @@ export ANSIBLE_COW_SELECTION=random
 # see http://unix.stackexchange.com/questions/1288/preserve-bash-history-in-multiple-terminal-windows
 
 
-#export HISTSIZE=
-#export HISTFILESIZE=1000000
+export HISTSIZE=
+export HISTFILESIZE=1000000
 
 
 
