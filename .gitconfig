@@ -32,8 +32,11 @@
 	cd = checkout
 	cleanup = "!git branch --merged master | grep  -v '\\*\\|master\\|develop\\|staging' | xargs -n 1 git branch -d"
 	cleanup-dry-run = "!git branch --merged master | grep  -v '\\*\\|master\\|develop'"
+	conflicts = !git ls-files --unmerged | cut -f2 | sort -u
 	com = commit -m
 	comm = commit
+	count-conflicts = !grep -c '^=======$'
+	count-all-conflicts = !grep -c  --no-filename '^=======$' $(git conflicts)  | paste -s -d+ - | bc
 	f = commit --amend --no-edit
 	follow = log --follow -p
 	logbranch = "!git log --graph --oneline -$(git rev-list master..HEAD --count)"
