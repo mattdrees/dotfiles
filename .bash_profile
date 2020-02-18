@@ -135,3 +135,6 @@ clear-aws-env() {
   source source-to-clear-AWS-envvars.sh
 }
 
+
+source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.bash.inc"
+source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc"
