@@ -18,6 +18,8 @@ export DYLD_LIBRARY_PATH=$DYLD_LIBRARY_PATH:$ORACLE_HOME
 export TNS_ADMIN=$ORACLE_HOME/network/admin
 export PATH=$ORACLE_HOME:$PATH
 
+export PATH=~/Projects/ecs_config/bin:$PATH
+
 
 alias setjh="source ~/Scripts/setjavahome.sh"
 
@@ -140,3 +142,5 @@ source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.
 source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc"
 
 . $(brew --prefix asdf)/asdf.sh
+
+complete -C /usr/local/bin/boundary boundary
