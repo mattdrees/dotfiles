@@ -20,32 +20,6 @@ use_node_8() {
   export PATH="/usr/local/opt/node@8/bin:$PATH"
 }
 
-# The following three are adapted from https://gist.github.com/moklett/3170636#gistcomment-827700
-
-# don't require a password for `sudo openconnect`
-vpnsetup() {
-  sudo sh -c 'echo "%admin ALL=(ALL) NOPASSWD: /usr/local/bin/openconnect, /bin/kill" > /etc/sudoers.d/openconnect'
-}
-
-vpnstart() {
-  sudo openconnect \
-    --background \
-    --pid-file="$HOME/.openconnect.pid" \
-    --user="$VPN_USERNAME" \
-    --authgroup="$VPN_AUTHGROUP" \
-    --csd-user=mattdrees \
-    --csd-wrapper=trojans/csd-wrapper.sh \
-    "$VPN_ADDRESS"
-}
-
-vpnstop() {
-  if [[ -f "$HOME/.openconnect.pid" ]]; then
-    sudo kill -2 $(cat "$HOME/.openconnect.pid") && rm -f "$HOME/.openconnect.pid"
-  else
-    echo "openconnect pid file does not exist, probably not running"
-  fi
-}
-
 power_cycle_network() {
   sudo ifconfig en7 down
   networksetup -setairportpower en0 off
