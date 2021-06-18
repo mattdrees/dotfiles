@@ -28,6 +28,7 @@
 [commit]
 	template = /Users/mattdrees/.stCommitMsg
 [alias]
+	a = add
 	alias = config --get-regexp ^alias\\.
 	cd = checkout
 	cleanup = "!git branch --merged master | grep  -v '\\*\\|master\\|develop\\|staging' | xargs -n 1 git branch -d"
@@ -44,6 +45,7 @@
 	pf = push --force-with-lease
 	pushf = push --force-with-lease
 	r = commit --amend
+	riom = rebase --interactive origin/master
 	st = status --branch --short
 	unstage = reset HEAD --
 	unstage-patch = reset HEAD --patch
