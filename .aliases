@@ -19,7 +19,10 @@ alias jqp="jq '.'"
 alias xmlp=" xmllint --format  -"
 
 alias cdf='eval `osascript /Applications/Utilities/OpenTerminal.app/Contents/Resources/Scripts/OpenTerminal.scpt `'
-alias la='ls -laO'
+alias la='exa -la'
+alias ls='exa'
+alias ll='exa -l'
+
 
 alias gs='git status'
 alias gds='git diff --staged'
@@ -30,7 +33,7 @@ alias yds='yadm diff --staged'
 alias yd='yadm diff'
 
 
-alias cdgr='cd ./`git rev-parse --show-prefix`'
+alias cdgr='cd `git rev-parse --show-toplevel`'
 
 alias copyLastCmd="fc -ln -1 | awk '{\$1=\$1}1' | pbcopy"
 
@@ -38,8 +41,24 @@ alias copybranch="git rev-parse --abbrev-ref HEAD | pbcopy"
 
 alias pbwc='pbpaste | wc'
 
-alias bp='code ~/.bash_profile'
 alias editaliases='code ~/.aliases'
+alias reloadaliases='source ~/.aliases'
+
+alias bp='code ~/.bash_profile'
 alias reload='source ~/.bash_profile'
 
 alias copyfixup="git fixup | cut -f1 -d' ' | tr -d '\n' | pbcopy"
+
+alias psg='ps -ef | head -1 ; ps -ef | grep -v grep | grep '
+
+alias dc="docker-compose"
+
+alias tfp="terraform plan -no-color  | grep -E '^\s*.?[#~+-]'"
+
+# only useful in a temporary sub shell:
+alias start_typing_secrets="echo 'Note: You should be in a temp sub shell'; unset HISTFILE"
+
+#alias tf="AWS_PROFILE=cruds terraform"
+alias tf="~/Projects/cru-terraform/bin/cru-terraform"
+
+alias dnsquery='dscacheutil -q host -a name'
