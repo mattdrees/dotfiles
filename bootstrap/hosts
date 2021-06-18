@@ -1,5 +1,6 @@
 127.0.0.1 localhost.cru.org
 127.0.0.1   staffweb-local.cru.org
+127.0.0.1   wsapi-local.cru.org
 # 127.0.0.1 sites-stage.familylife.com
 # 127.0.0.1 www-stage.familylife.com
 # 192.168.99.100 k8s0 color.world.net green.color.world.net blue.color.world.net
