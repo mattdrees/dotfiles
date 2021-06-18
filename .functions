@@ -19,3 +19,74 @@ jsonless() {
 use_node_8() {
   export PATH="/usr/local/opt/node@8/bin:$PATH"
 }
+
+# The following three are adapted from https://gist.github.com/moklett/3170636#gistcomment-827700
+
+# don't require a password for `sudo openconnect`
+vpnsetup() {
+  sudo sh -c 'echo "%admin ALL=(ALL) NOPASSWD: /usr/local/bin/openconnect, /bin/kill" > /etc/sudoers.d/openconnect'
+}
+
+vpnstart() {
+  sudo openconnect \
+    --background \
+    --pid-file="$HOME/.openconnect.pid" \
+    --user="$VPN_USERNAME" \
+    --authgroup="$VPN_AUTHGROUP" \
+    --csd-user=mattdrees \
+    --csd-wrapper=trojans/csd-wrapper.sh \
+    "$VPN_ADDRESS"
+}
+
+vpnstop() {
+  if [[ -f "$HOME/.openconnect.pid" ]]; then
+    sudo kill -2 $(cat "$HOME/.openconnect.pid") && rm -f "$HOME/.openconnect.pid"
+  else
+    echo "openconnect pid file does not exist, probably not running"
+  fi
+}
+
+power_cycle_network() {
+  sudo ifconfig en7 down
+  networksetup -setairportpower en0 off
+  sudo ifconfig en7 up
+  networksetup -setairportpower en0 on
+}
+
+
+# From https://opensource.com/article/20/1/bash-scripts-aliases
+function looooooooong {
+    START=$(date +%s.%N)
+    $*
+    EXIT_CODE=$?
+    END=$(date +%s.%N)
+    DIFF=$(echo "$END - $START" | bc)
+    RES=$(python -c "diff = $DIFF; min = int(diff / 60); print('%s min' % min)")
+    result="$1 completed in $RES, exit code $EXIT_CODE."
+    echo -e "\n⏰  $result"
+    ( say -r 250 $result 2>&1 > /dev/null & )
+}
+
+function cruds {
+  export AWS_PROFILE=cruds
+}
+
+# From https://www.redhat.com/sysadmin/cd-command
+function cd
+{
+    if [ $# -eq 0 ]; then
+        pushd ~ > /dev/null
+    elif [ " $1" = " -" ]; then
+        pushd "$OLDPWD" > /dev/null
+    else
+        pushd "$@" > /dev/null
+    fi
+}
+
+
+#alias github-to-ssh='git remote set-url origin $(git remote get-url origin  | sed 's|https://github.com/|git@github.com:|')'
+function github-to-ssh
+{
+  local new_origin=$(git remote get-url origin  | sed 's|https://github.com/|git@github.com:|')
+  git remote set-url origin "$new_origin"
+}
