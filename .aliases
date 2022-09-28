@@ -1,5 +1,8 @@
 # for now, keep this compatible with both bash and zsh
 
+# Note: `idea` command is installed by Intellij; I typically use default location of /usr/local/bin/idea
+alias edit="idea -e"
+
 alias mtree='mvn dependency:tree | less -R'
 alias mvnt='mvn --threads 1C -DskipAllTests --offline'
 JDWP_DEBUG="-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005"
@@ -34,10 +37,10 @@ alias copybranch="git rev-parse --abbrev-ref HEAD | pbcopy"
 
 alias pbwc='pbpaste | wc'
 
-alias editaliases='code ~/.aliases'
+alias editaliases='edit ~/.aliases'
 alias reloadaliases='source ~/.aliases'
 
-alias bp='code ~/.bash_profile'
+alias bp='edit ~/.bash_profile'
 alias reload='source ~/.bash_profile'
 
 alias copyfixup="git fixup | cut -f1 -d' ' | tr -d '\n' | pbcopy"
