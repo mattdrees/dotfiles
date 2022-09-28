@@ -1,5 +1,11 @@
 #!/usr/bin/env bash
 
+if [ -z "$MY_PHONE_NUMBER" ]
+then
+  echo "Set MY_PHONE_NUMBER before running"
+  exit 1
+fi
+
 
 # Close any open System Preferences panes, to prevent them from overriding
 # settings we’re about to change
@@ -246,7 +252,8 @@ defaults write com.google.Chrome PMPrintingExpandedStateForPrint2 -bool true
 # Success                                                                     #
 ###############################################################################
 
-echo "successfully wrote preferences. In 5 seconds a bunch of apps, including Terminal, will restart."
+echo "successfully wrote preferences. In 5 seconds a bunch of apps, including Terminal, will exit."
+echo "Note that some of these changes require a logout/restart to take effect."
 sleep 5
 
 ###############################################################################
@@ -265,4 +272,3 @@ for app in \
 	"Terminal"; do
 	killall "${app}" &> /dev/null
 done
-echo "Done. Note that some of these changes require a logout/restart to take effect."
