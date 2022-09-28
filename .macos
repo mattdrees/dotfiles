@@ -38,9 +38,9 @@ defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
 # Screen                                                                      #
 ###############################################################################
 
-# Save screenshots to the desktop
-mkdir -p ${HOME}/Pictures/Screnshots
-defaults write com.apple.screencapture location -string "${HOME}/Pictures/Screnshots"
+# Save screenshots to my Screenshots dir
+mkdir -p ${HOME}/Pictures/Screenshots
+defaults write com.apple.screencapture location -string "${HOME}/Pictures/Screenshots"
 
 ###############################################################################
 # Finder                                                                      #
