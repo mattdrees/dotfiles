@@ -243,6 +243,13 @@ defaults write com.apple.commerce AutoUpdate -bool true
 defaults write com.google.Chrome PMPrintingExpandedStateForPrint2 -bool true
 
 ###############################################################################
+# Success                                                                     #
+###############################################################################
+
+echo "successfully wrote preferences. In 5 seconds a bunch of apps, including Terminal, will restart."
+sleep 5
+
+###############################################################################
 # Kill affected applications                                                  #
 ###############################################################################
 
