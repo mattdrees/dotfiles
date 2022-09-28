@@ -1,3 +1,5 @@
+# for now, keep this compatible with both bash and zsh
+
 alias mtree='mvn dependency:tree | less -R'
 alias mvnt='mvn --threads 1C -DskipAllTests --offline'
 JDWP_DEBUG="-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005"
