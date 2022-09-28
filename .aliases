@@ -3,17 +3,8 @@
 alias mtree='mvn dependency:tree | less -R'
 alias mvnt='mvn --threads 1C -DskipAllTests --offline'
 JDWP_DEBUG="-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005"
-#JREBEL="-javaagent:/Users/mattdrees/.jrebel/jrebel.jar"
-#JREBEL="-javaagent:/Users/mattdrees/Scratch/jrebel-nightly/jrebel/jrebel.jar"
-#JREBEL="-agentpath:/Users/mattdrees/Scratch/jrebel-nightly/jrebel/lib/libjrebel64.dylib"
-#JREBEL="-agentpath:/Users/mattdrees/Library/Application Support/IdeaIC2016.2/jr-ide-idea/lib/jrebel6/lib/libjrebel64.dylib"
-JREBEL="-agentpath:/Users/mattdrees/.jrebel/lib/libjrebel64.dylib"
 
 alias mvnd='MAVEN_OPTS="$MAVEN_OPTS '"$JDWP_DEBUG"'" mvn'
-alias mvnj='MAVEN_OPTS="$MAVEN_OPTS '"$JREBEL"'" mvn'
-alias mvndj='MAVEN_OPTS="$MAVEN_OPTS  '"$JREBEL $JDWP_DEBUG"'" mvn'
-
-alias killkav='sudo pkill -1 -U root kav'
 
 alias cdpwd='cd $PWD'
 
