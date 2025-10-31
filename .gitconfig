@@ -50,6 +50,7 @@
 	unstage = reset HEAD --
 	unstage-patch = reset HEAD --patch
 	wat = log --graph --decorate --oneline -15
+	ff = merge --ff-only @{u}
 [diff "blackbox"]
 	textconv = gpg --use-agent -q --batch --decrypt
 [rebase]

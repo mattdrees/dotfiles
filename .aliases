@@ -18,7 +18,7 @@ alias cdf='eval `osascript /Applications/Utilities/OpenTerminal.app/Contents/Res
 alias la='exa -la'
 alias ls='exa'
 alias ll='exa -l'
-
+alias tree='exa --tree'
 
 alias gs='git status'
 alias gds='git diff --staged'
